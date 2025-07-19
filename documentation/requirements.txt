@@ -1,0 +1,18 @@
+# MkDocs 核心
+mkdocs>=1.5.0
+
+# Material 主题 - 现代化、美观的文档主题
+mkdocs-material>=9.4.0
+
+# 插件扩展
+mkdocs-awesome-pages-plugin>=2.9.0  # 页面管理
+mkdocs-git-revision-date-localized-plugin>=1.2.0  # Git 修改时间
+mkdocs-minify-plugin>=0.7.0  # HTML/CSS/JS 压缩
+mkdocs-redirects>=1.2.0  # 重定向支持
+
+# 代码高亮和语法扩展
+pymdown-extensions>=10.0  # Markdown 扩展
+pygments>=2.16.0  # 代码语法高亮
+
+# 数学公式支持
+mkdocs-macros-plugin>=1.0.0  # 宏和变量支持 

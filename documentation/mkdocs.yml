@@ -1,0 +1,142 @@
+# 站点信息
+site_name: 推荐系统学习指南
+site_description: 从基础理论到实践应用的完整推荐系统教程
+site_author: YaronCoding
+site_url: https://yaroncoding.github.io/recommendation-system-guide/
+
+# 仓库信息
+repo_name: YaronCoding/recommendation-system-guide
+repo_url: https://github.com/YaronCoding/recommendation-system-guide
+
+# 版权信息
+copyright: Copyright &copy; 2024 YaronCoding
+
+# 主题配置
+theme:
+  name: material
+  language: zh
+  palette:
+    # 浅色模式
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    # 深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  
+  features:
+    - navigation.tabs              # 标签页导航
+    - navigation.tabs.sticky       # 粘性标签页
+    - navigation.sections          # 导航分组
+    - navigation.expand           # 展开导航
+    - navigation.path             # 导航路径
+    - navigation.top              # 返回顶部按钮
+    - search.highlight            # 搜索高亮
+    - search.share               # 搜索分享
+    - content.code.copy          # 代码复制按钮
+    - content.code.annotate      # 代码注释
+
+  icon:
+    repo: fontawesome/brands/github
+
+# 导航结构
+nav:
+  - 首页: index.md
+  - 理论基础:
+    - 推荐系统核心思想与架构: theory/01-core-concepts.md
+    - 特征工程：从原始数据到模型输入: theory/02-feature-engineering.md
+    - 揭秘Embedding魔法: theory/03-embedding-magic.md
+    - 推荐模型的进化史: theory/05-model-evolution.md
+    - 相似度计算：推荐的度量衡: theory/06-similarity-computation.md
+  - 算法实现:
+    - ItemCF算法深度解析: algorithms/07-itemcf-analysis.md
+    - 推荐系统的两步走战略：召回与排序: algorithms/08-recall-ranking.md
+    - 逻辑回归深度解析: algorithms/09-logistic-regression.md
+  - 前沿技术:
+    - 当推荐系统遇见最强大脑LLM: advanced/04-llm-recommendation.md
+  - 代码实践:
+    - ItemCF 实现: code/itemcf.md
+    - 逻辑回归实现: code/logistic-regression.md
+
+# 插件配置
+plugins:
+  - search:
+      lang: 
+        - zh
+        - en
+  - git-revision-date-localized:
+      type: datetime
+      timezone: Asia/Shanghai
+      locale: zh
+  - minify:
+      minify_html: true
+      minify_css: true
+      minify_js: true
+  - awesome-pages
+
+# Markdown 扩展
+markdown_extensions:
+  # Python Markdown 内置扩展
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+  # PyMdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# 额外配置
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/YaronCoding
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:yangyaron9@gmail.com
+
+# 数学公式支持
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css 
